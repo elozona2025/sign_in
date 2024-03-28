@@ -77,9 +77,19 @@
         <div id="nav"></div>
             <p> </p>
             <div id="border">
-                <form action = "" method = "">
+                <form action = "login_process.php" method = "post">
                     <h1>Sign In</h1>
-
+                    <div class="login_error">
+                        <?php
+                        if(empty($_SESSION['login_error'])){
+                        ?>
+                        <div class="login_error">
+                            <!--// $_SESSION['login_error'];?> -->
+                            <?php //unset($_SESSION['usernamelogin_errot']);?>
+                    
+                            <?php }
+                        ?>
+                    </div>
                     <div class = "input">
                     <lable for = "username"> Username </lable> <br>
                     <input type ="text" name = "username" id = "username" placeholder = "Required"> <br><br>
